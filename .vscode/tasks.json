@@ -1,0 +1,33 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Run LocalLedger Streamlit",
+			"type": "shell",
+			"command": "C:\\Users\\Dell\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+			"args": [
+				"-m",
+				"streamlit",
+				"run",
+				"app.py",
+				"--server.headless",
+				"true"
+			],
+			"isBackground": true,
+			"problemMatcher": [
+				{
+					"owner": "streamlit",
+					"pattern": {
+						"regexp": "^$",
+						"message": 0
+					},
+					"background": {
+						"activeOnStart": true,
+						"beginsPattern": "Uvicorn server started",
+						"endsPattern": "Local URL: http://localhost:8501"
+					}
+				}
+			]
+		}
+	]
+}
